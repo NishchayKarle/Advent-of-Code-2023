@@ -39,7 +39,6 @@ def part1(data):
                 galaxies[i][1] - galaxies[j][1]
             )
             total += dist
-            # print(i + 1, j + 1, dist)
 
     return total
 
@@ -55,21 +54,6 @@ def part2(data):
     for j in range(len(data[0])):
         if "#" not in [data[i][j] for i in range(len(data))]:
             empty_cols.add(j)
-
-    # count = 0
-    # for row in sorted(empty_rows):
-    #     r = row + count
-    #     data.insert(r, "." * len(data[0]))
-    #     count += 1
-
-    # empty_cols = sorted(empty_cols)
-    # count = 0
-    # for i in range(len(data)):
-    #     count = 0
-    #     for col in empty_cols:
-    #         c = col + count
-    #         data[i] = data[i][:c] + "." + data[i][c:]
-    #         count += 1
 
     galaxies = []
     for i in range(len(data)):
